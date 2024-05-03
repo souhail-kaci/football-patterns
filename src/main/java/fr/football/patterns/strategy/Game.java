@@ -4,16 +4,16 @@ public class Game {
 
     public static void main(String... args) {
 
-        //CREATE PLAYER
-        var player1 = new Player("Sergio Ramos");
+        //CREATE TEAMS
+        var team1 = new Team("Barcelona");
 
-        var player2 = new Player("Lionel Messi");
+        var team2 = new Team("Real Madrid");
 
-        //CREATE STRATEGY
+        //APPLY STRATEGY
 
-        player1.applyCoachStrategy(new DefenseStrategy());
+        team1.applyCoachStrategy(new DefenseStrategy());
+        team2.applyCoachStrategy(new AttackStrategy());
 
-        player2.applyCoachStrategy(new AttackStrategy());
 
     }
 }

@@ -6,7 +6,7 @@ interface GameStrategy{
 }
 class AttackStrategy
 class DefenseStrategy
-class Player {
+class Team {
 String name
 +applyCoachStrategy(GameStrategy strategy):void
 }
