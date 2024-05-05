@@ -13,3 +13,28 @@ Similarly, in our football example, the Strategy design pattern involves definin
 In summary, the Strategy design pattern allows football teams to dynamically choose from several predefined game strategies based on the current match circumstances. This flexibility enhances the team's ability to respond effectively to different game situations, ultimately improving their chances of success on the field.
 
 ![alt Strategy uml](src/main/resources/strategy/strategy.png)
+
+# Observer Pattern
+The Observer pattern is a design pattern that allows an object, called the subject or observable, to maintain a list of its dependents, called observers, and notify them automatically of any state changes, typically by calling a specific method on each observer when the subject's state changes.
+
+Think of it this way: imagine you follow several friends on a social media platform. Whenever one of your friends posts a new update, you automatically receive a notification without your friend having to inform you individually about each post.
+
+In this scenario:
+
+- Your friend on the social media platform is the subject or observable.
+- You and other users who follow your friend are the observers.
+
+Every time your friend posts a new update (i.e., the subject's state changes), you and other users who follow your friend automatically receive a notification of the new update without your friend having to individually contact each follower.
+
+# Application in the Example of Football Match Tracking:
+
+Now let's apply this concept to our example of tracking a football match:
+
+- The football match is the subject or observable.
+- The spectators using the match tracking application are the observers.
+
+Each time an event occurs during the match, such as a goal scored, a card shown, or a player substitution, the match automatically sends a notification to all spectators of the application, without needing to individually contact each spectator. Each spectator then reacts accordingly, for example, by displaying the information on the screen or sending push notifications.
+
+By using the Observer pattern, our football match tracking application can easily update all its spectators in real-time on the match events, providing an immersive and engaging experience for football fans.
+
+![alt Strategy uml](src/main/resources/observer/observer.png)
