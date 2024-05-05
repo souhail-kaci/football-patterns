@@ -12,4 +12,4 @@ Similarly, in our football example, the Strategy design pattern involves definin
 
 In summary, the Strategy design pattern allows football teams to dynamically choose from several predefined game strategies based on the current match circumstances. This flexibility enhances the team's ability to respond effectively to different game situations, ultimately improving their chances of success on the field.
 
-![alt Strategy uml](src/main/resources/strategy.png)
+![alt Strategy uml](src/main/resources/strategy/strategy.png)
