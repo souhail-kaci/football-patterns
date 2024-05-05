@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface ObservableMatch{
+ +addObserver(MatchObserver observer):void
+ +addObservers(MatchObserver ...observer):void
+ +removeObserver(MatchObserver observer):void
+ +notify(String message):void
+}
+interface MatchObserver{
+ +update(String message):void
+}
+class FootballMatch {
+ observers:List<MatchObserver>
++addObserver(MatchObserver observer):void
+ +addObservers(MatchObserver ...observer):void
+ +removeObserver(MatchObserver observer):void
+ +notify(String message):void
+}
+class Spectator{
+name:String
++update(String message):void
+}
+class FootballApp{
+name:String
++update(String message):void
+}
+
+
+ObservableMatch <|.. FootballMatch
+MatchObserver <|.. Spectator
+MatchObserver <|.. FootballApp
+
+FootballMatch o-right- MatchObserver
+@enduml

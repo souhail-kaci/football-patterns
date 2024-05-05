@@ -4,8 +4,12 @@
 interface GameStrategy{
  +applyStrategy(String name):void
 }
-class AttackStrategy
-class DefenseStrategy
+class AttackStrategy{
+ +applyStrategy(String name):void
+}
+class DefenseStrategy{
+ +applyStrategy(String name):void
+}
 class Team {
 String name
 +applyCoachStrategy(GameStrategy strategy):void
