@@ -37,4 +37,24 @@ Each time an event occurs during the match, such as a goal scored, a card shown,
 
 By using the Observer pattern, our football match tracking application can easily update all its spectators in real-time on the match events, providing an immersive and engaging experience for football fans.
 
-![alt Strategy uml](src/main/resources/observer/observer.png)
+
+# Decorator Pattern
+
+The Decorator Design Pattern is a structural design pattern that allows for dynamically adding additional responsibilities to an object without altering its structure. Decorators provide a flexible alternative to subclassing for extending an object's functionalities.
+
+**Key Characteristics of the Decorator Pattern :** 
+- **Flexibility** : Allows adding functionalities to individual objects dynamically.
+- **Transparency** : Decorated objects can be used in the same way as undecorated objects, as they share the same interface or base class.
+- **Combination of Behaviors** : Multiple decorators can be combined to add various functionalities to an object.
+
+**Structure of the Decorator Pattern**
+
+- **Component** : An interface or abstract class defining the operations that objects can perform.
+- **ConcreteComponent** : A concrete implementation of the Component interface that represents the core object to which additional responsibilities can be added.
+- **Decorator** : An abstract class implementing the Component interface and containing a reference to a Component object. It delegates operations to the referenced object.
+- **ConcreteDecorator** : Concrete classes extending the Decorator class and adding specific functionalities to the decorated object.
+
+In the domain of football, the Decorator pattern can be used to dynamically add skills or additional characteristics to players without modifying the base player class. For instance, we can add skills such as Dribbler,Free Kick Specialist, or Captain to specific players.
+
+![alt Strategy uml](src/main/resources/decorator/decorator.png)
+
