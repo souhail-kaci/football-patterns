@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Player{
+  getDescription():String
+  getSkillsLevel():int
+}
+
+class BasicPlayer implements Player{
+ name:String
+ skillsLevel:int
+ getDescription():String
+ getSkillsLevel():int
+}
+
+abstract class PlayerDecorator implements Player{
+ player:Player
+ getDescription():String
+ getSkillsLevel():int
+}
+
+class DribblerDecorator extends PlayerDecorator{
+
+DribblerDecorator(player:Player):constructor
+getDescription():String
+getSkillsLevel():int
+
+}
+
+class FreeKickSpecialistDecorator extends PlayerDecorator{
+FreeKickSpecialistDecorator(player:Player):constructor
+getDescription():String
+getSkillsLevel():int
+}
+
+class CaptainDecorator extends PlayerDecorator{
+CaptainDecorator(player:Player):constructor
+getDescription():String
+getSkillsLevel():int
+}
+
+PlayerDecorator *--	Player
+
+
+@enduml
