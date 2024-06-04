@@ -58,3 +58,25 @@ In the domain of football, the Decorator pattern can be used to dynamically add 
 
 ![alt Strategy uml](src/main/resources/decorator/decorator.png)
 
+# Factory Pattern
+
+The Abstract Factory Pattern is a design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. This pattern allows you to group objects that belong to the same family and use them together, ensuring consistency and interchangeability of the created objects.
+
+The main objectives of the Abstract Factory Pattern are to encapsulate object creation to prevent client code from knowing concrete classes, facilitate extensibility by allowing the addition of new product families without modifying existing code, and ensure consistency among objects created by the same factory.
+
+The pattern consists of several key components:
+
+- **Abstract Factory** : An interface or abstract class that declares the creation methods for each type of product.
+- **Concrete Factory**: Concrete implementations of the abstract factory that create specific instances of products.
+- **Abstract Product**: Interfaces or abstract classes for the different types of products that can be created.
+- **Concrete Product**: Concrete implementations of the abstract products.
+- **Client**: The code that uses the abstract factory to create objects without knowing their concrete classes.
+
+Example Implementing the Abstract Factory Pattern: 
+
+In our project, we have two types of products: players and coaches. Each of these products can have different implementations depending on the league to which they belong.
+
+- Define Product Interfaces: We start by defining interfaces for players and coaches. These interfaces declare the methods that each type of product must implement, without specifying details on how these methods will be implemented.
+- Create Concrete Products: Next, we create concrete classes for each type of player and coach. For example, a European player might play differently than an American player, and the same goes for coaches.
+- Define the Abstract Factory: We define an interface for the abstract factory that declares methods for creating objects of each product type. This interface allows the client to create products without knowing the details of their implementation.
+- Implement Concrete Factories: We create concrete classes that implement the abstract factory interface. Each concrete factory is responsible for creating specific objects for a given league. For example, a factory for the European League will create European players and coaches.
