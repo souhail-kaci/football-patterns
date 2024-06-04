@@ -1,0 +1,52 @@
+@startuml
+
+interface Player {
+    + void play()
+}
+
+interface Coach {
+    + void coach()
+}
+
+class EuropeanPlayer implements Player {
+    + void play()
+}
+
+class AmericanPlayer implements Player {
+    + void play()
+}
+
+class EuropeanCoach implements Coach {
+    + void coach()
+}
+
+class AmericanCoach implements Coach {
+    + void coach()
+}
+
+interface SportsFactory {
+    + Player createPlayer()
+    + Coach createCoach()
+}
+
+class EuropeanSportsFactory implements SportsFactory {
+    + Player createPlayer()
+    + Coach createCoach()
+}
+
+class AmericanSportsFactory implements SportsFactory {
+    + Player createPlayer()
+    + Coach createCoach()
+}
+
+
+
+SportsFactory --> Player
+SportsFactory --> Coach
+
+class Main {
+    main()
+}
+
+Main --> SportsFactory
+@enduml

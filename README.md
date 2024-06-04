@@ -80,3 +80,4 @@ In our project, we have two types of products: players and coaches. Each of thes
 - Create Concrete Products: Next, we create concrete classes for each type of player and coach. For example, a European player might play differently than an American player, and the same goes for coaches.
 - Define the Abstract Factory: We define an interface for the abstract factory that declares methods for creating objects of each product type. This interface allows the client to create products without knowing the details of their implementation.
 - Implement Concrete Factories: We create concrete classes that implement the abstract factory interface. Each concrete factory is responsible for creating specific objects for a given league. For example, a factory for the European League will create European players and coaches.
+  ![alt Strategy uml](src/main/resources/factory/factory.png)
