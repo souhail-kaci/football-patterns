@@ -36,7 +36,7 @@ Now let's apply this concept to our example of tracking a football match:
 Each time an event occurs during the match, such as a goal scored, a card shown, or a player substitution, the match automatically sends a notification to all spectators of the application, without needing to individually contact each spectator. Each spectator then reacts accordingly, for example, by displaying the information on the screen or sending push notifications.
 
 By using the Observer pattern, our football match tracking application can easily update all its spectators in real-time on the match events, providing an immersive and engaging experience for football fans.
-
+![alt Strategy uml](src/main/resources/observer/observer.png)
 
 # Decorator Pattern
 
