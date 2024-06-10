@@ -1,0 +1,48 @@
+@startuml
+interface Command {
+    +execute(): void
+}
+
+class Player {
+    +name: String
+    +Player(name: String)
+    +passBall(): void
+    +shootGoal(): void
+    +dribble(): void
+}
+
+Command <|.. PassCommand
+Command <|.. ShootCommand
+Command <|.. DribbleCommand
+
+class PassCommand {
+    -player: Player
+    +PassCommand(player: Player)
+    +execute(): void
+}
+
+class ShootCommand {
+    -player: Player
+    +ShootCommand(player: Player)
+    +execute(): void
+}
+
+class DribbleCommand {
+    -player: Player
+    +DribbleCommand(player: Player)
+    +execute(): void
+}
+
+class Coach {
+    -commands: List<Command>
+    +setCommand(command: Command): void
+    +executeCommands(): void
+}
+
+Player --> PassCommand
+Player --> ShootCommand
+Player --> DribbleCommand
+
+Coach --> Command
+
+@enduml

@@ -120,3 +120,7 @@ How it Works
 - Concrete Commands: Each action the player can take is represented by a concrete command class. For example, PassCommand, ShootCommand, and DribbleCommand each implement the Command interface and define the execute method to call the appropriate method on the player.
 - Coach (Invoker): The coach can issue commands to players. It keeps track of commands and can execute them as needed.
 - Client: The client sets up the commands, assigns them to the players, and uses the coach to execute these commands.
+
+
+
+  ![alt Strategy uml](src/main/resources/command/command.png)
