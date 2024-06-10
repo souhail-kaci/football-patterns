@@ -81,3 +81,42 @@ In our project, we have two types of products: players and coaches. Each of thes
 - Define the Abstract Factory: We define an interface for the abstract factory that declares methods for creating objects of each product type. This interface allows the client to create products without knowing the details of their implementation.
 - Implement Concrete Factories: We create concrete classes that implement the abstract factory interface. Each concrete factory is responsible for creating specific objects for a given league. For example, a factory for the European League will create European players and coaches.
   ![alt Strategy uml](src/main/resources/factory/factory.png)
+
+# Command Pattern
+
+The Command Pattern is a behavioral design pattern that turns a request into a stand-alone object that contains all information about the request. This transformation allows for parameterizing clients with queues, requests, and operations. The primary objective of the Command Pattern is to decouple the object that invokes the operation from the object that knows how to perform it.
+
+Key Components of the Command Pattern
+- Command Interface: Declares an interface for executing an operation.
+- Concrete Command: Implements the Command interface and defines the binding between a receiver and an action.
+- Receiver: Knows how to perform the work needed to carry out the request.
+- Invoker: Asks the command to carry out the request.
+- Client: Creates a ConcreteCommand object and sets its receiver.
+
+## Example 
+
+Imagine we are developing a football simulation application. We want to encapsulate different actions that players can perform on the field, such as passing the ball, shooting at the goal, and dribbling . We can use the Command Pattern to model these actions.
+
+- Command Interface:
+  - Defines the execute method which every command will implement.
+- Concrete Commands:
+  - PassCommand: Represents the action of passing the ball.
+  - ShootCommand: Represents the action of shooting at the goal.
+  - DribbleCommand: Represents the action of dribbling .
+- Receiver:
+
+  - Player: Knows how to perform actions like passing, shooting, and dribbling.
+- Invoker:
+
+  - Coach: Stores and invokes commands.
+- Client:
+
+  - Sets up the commands and associates them with the player actions.
+
+  
+How it Works
+- Player (Receiver): This is the class that will perform the actual work. For instance, the player can pass the ball, shoot, or dribble.
+- Command Interface: An interface that declares the execute method. All command classes will implement this interface.
+- Concrete Commands: Each action the player can take is represented by a concrete command class. For example, PassCommand, ShootCommand, and DribbleCommand each implement the Command interface and define the execute method to call the appropriate method on the player.
+- Coach (Invoker): The coach can issue commands to players. It keeps track of commands and can execute them as needed.
+- Client: The client sets up the commands, assigns them to the players, and uses the coach to execute these commands.
